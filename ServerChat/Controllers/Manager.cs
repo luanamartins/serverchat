@@ -7,9 +7,16 @@ namespace ServerChat.Controllers
 {
     class Manager
     {
+
         public void processRequest() 
         { 
-        
+            
+        }
+
+        public void loginRequest() 
+        {
+            String nameUser = "User";
+            
         }
     }
 }

@@ -11,6 +11,13 @@ namespace ServerChat
 {
     public partial class Form1 : Form
     {
+        public RichTextBox displayRichTextBox 
+        {
+            get {
+                return displayOnlineUsers;
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
