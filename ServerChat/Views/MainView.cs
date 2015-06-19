@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using ServerChat.Views;
 using ServerChat.Controllers;
+using ServerChat.Utils;
 
 namespace ServerChat
 {
@@ -34,26 +35,32 @@ namespace ServerChat
 
         public void updateFields() 
         {
-            changeNumberOfUsers();
-            changeNumberOfMessages();
+            updateNumberOfUsers();
+            updateNumberOfMessages();
             updatePortNumber();
         }
 
         public void updatePortNumber() 
         {
-            port.Text = "Port: " + Singleton.getInstance().Port;
+            string value = Singleton.getInstance().Port.ToString();
+            port.Text = formatString(Constants.PORT_LABEL, value);
         }
 
-        public void changeNumberOfUsers() 
+        public void updateNumberOfUsers() 
         {
             int currentNumberOfUsers = Controllers.Manager.NumberOfUsers;
-            totalOfUsers.Text = "Total of users: " + currentNumberOfUsers; 
+            totalOfUsers.Text = formatString(Constants.TOTAL_USERS_LABEL, currentNumberOfUsers.ToString()); 
         }
 
-        public void changeNumberOfMessages()
+        public void updateNumberOfMessages()
         {
             int currentNumberOfMessages = Controllers.Manager.NumberOfMessages;
-            totalOfMessages.Text = "Total of messages: " + currentNumberOfMessages;
+            totalOfMessages.Text = formatString(Constants.TOTAL_MESSAGES_LABEL, currentNumberOfMessages.ToString());
+        }
+
+        public string formatString(string field, string value) 
+        {
+            return field + ": " + value;
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
