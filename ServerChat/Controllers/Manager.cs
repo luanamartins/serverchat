@@ -8,6 +8,9 @@ namespace ServerChat.Controllers
     class Manager
     {
 
+        public static int NumberOfUsers { get; set; }
+        public static int NumberOfMessages { get; set; }
+
         public void processRequest() 
         { 
             

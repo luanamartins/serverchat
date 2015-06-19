@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using ServerChat.Views;
+
 namespace ServerChat
 {
     public partial class Form1 : Form
@@ -21,6 +23,24 @@ namespace ServerChat
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public void changeNumberOfUsers() 
+        {
+            int currentNumberOfUsers = Controllers.Manager.NumberOfUsers;
+            totalOfUsers.Text = "Total of users: " + currentNumberOfUsers; 
+        }
+
+        public void changeNumberOfMessages()
+        {
+            int currentNumberOfMessages = Controllers.Manager.NumberOfMessages;
+            totalOfMessages.Text = "Total of messages: " + currentNumberOfMessages;
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsView settingsView = new SettingsView();
+            settingsView.Show();
         }
     }
 }

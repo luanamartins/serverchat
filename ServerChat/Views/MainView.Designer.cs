@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.totalOfUsers = new System.Windows.Forms.Label();
             this.totalOfMessages = new System.Windows.Forms.Label();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // displayOnlineUsers
@@ -69,11 +70,22 @@
             this.totalOfMessages.TabIndex = 3;
             this.totalOfMessages.Text = "Total of messages: ";
             // 
+            // settingsButton
+            // 
+            this.settingsButton.Location = new System.Drawing.Point(496, 12);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(75, 23);
+            this.settingsButton.TabIndex = 4;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 300);
+            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.totalOfMessages);
             this.Controls.Add(this.totalOfUsers);
             this.Controls.Add(this.label1);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label totalOfUsers;
         private System.Windows.Forms.Label totalOfMessages;
+        private System.Windows.Forms.Button settingsButton;
 
 
 
