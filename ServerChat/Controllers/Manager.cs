@@ -22,11 +22,11 @@ namespace ServerChat.Controllers
         }
 
         public void processRequest() 
-        { 
-            
+        {
+               
         }
 
-        public void loginRequest(String username, String password) 
+        public void loginRequest(string username, string password) 
         {
             
         }
