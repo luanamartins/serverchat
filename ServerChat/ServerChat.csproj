@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="Controllers\Manager.cs" />
     <Compile Include="Controllers\Request.cs" />
+    <Compile Include="Controllers\RequestConstants.cs" />
+    <Compile Include="Controllers\WindowManager.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>

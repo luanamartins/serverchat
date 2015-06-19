@@ -22,5 +22,20 @@ namespace ServerChat
         {
             InitializeComponent();
         }
+
+        public void changeNumberOfUsers() 
+        {
+            int currentNumberOfUsers = Controllers.Manager.NumberOfUsers;
+            totalOfUsers.Text = "Total of users: " + currentNumberOfUsers; 
+        }
+
+        public void changeNumberOfMessages()
+        {
+            int currentNumberOfMessages = Controllers.Manager.NumberOfMessages;
+            totalOfMessages.Text = "Total of messages: " + currentNumberOfMessages;
+        }
+
+
+
     }
 }

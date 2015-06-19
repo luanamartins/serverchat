@@ -7,15 +7,27 @@ namespace ServerChat.Controllers
 {
     class Manager
     {
+        public static int NumberOfUsers;
+        public static int NumberOfMessages;
+        public List<String> listOfOnlineUsers;
+
+        public static void changeNumberUsers(int number) 
+        {
+            NumberOfUsers = number;
+        }
+
+        public static void changeNumberOfMessages(int number) 
+        {
+            NumberOfMessages = number;    
+        }
 
         public void processRequest() 
         { 
             
         }
 
-        public void loginRequest() 
+        public void loginRequest(String username, String password) 
         {
-            String nameUser = "User";
             
         }
     }
