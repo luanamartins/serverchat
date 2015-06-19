@@ -10,28 +10,16 @@ namespace ServerChat.Controllers
 {
     class Manager
     {
-        public static int NumberOfUsers;
-        public static int NumberOfMessages;
-        public List<String> listOfOnlineUsers;
-
-        public static void changeNumberUsers(int number) 
-        {
-            NumberOfUsers = number;
-        }
-
-        public static void changeNumberOfMessages(int number) 
-        {
-            NumberOfMessages = number;    
-        }
 
         public static int NumberOfUsers { get; set; }
         public static int NumberOfMessages { get; set; }
+        public List<String> listOfOnlineUsers;
 
         public void processRequest() 
         {
 
-            IPAddress ipAddress = IPAddress.Parse(RequestConstants.IP_ADDRESS);
-            int port = RequestConstants.PORT;
+            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+            int port = Singleton.getInstance().Port;
             TcpListener tcpListener = new TcpListener(ipAddress, port);
             
             tcpListener.Start();
