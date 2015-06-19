@@ -33,6 +33,7 @@
             this.totalOfUsers = new System.Windows.Forms.Label();
             this.totalOfMessages = new System.Windows.Forms.Label();
             this.settingsButton = new System.Windows.Forms.Button();
+            this.port = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // displayOnlineUsers
@@ -55,7 +56,7 @@
             // totalOfUsers
             // 
             this.totalOfUsers.AutoSize = true;
-            this.totalOfUsers.Location = new System.Drawing.Point(225, 33);
+            this.totalOfUsers.Location = new System.Drawing.Point(225, 58);
             this.totalOfUsers.Name = "totalOfUsers";
             this.totalOfUsers.Size = new System.Drawing.Size(77, 13);
             this.totalOfUsers.TabIndex = 2;
@@ -64,7 +65,7 @@
             // totalOfMessages
             // 
             this.totalOfMessages.AutoSize = true;
-            this.totalOfMessages.Location = new System.Drawing.Point(225, 60);
+            this.totalOfMessages.Location = new System.Drawing.Point(225, 84);
             this.totalOfMessages.Name = "totalOfMessages";
             this.totalOfMessages.Size = new System.Drawing.Size(99, 13);
             this.totalOfMessages.TabIndex = 3;
@@ -80,11 +81,21 @@
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
+            // port
+            // 
+            this.port.AutoSize = true;
+            this.port.Location = new System.Drawing.Point(228, 33);
+            this.port.Name = "port";
+            this.port.Size = new System.Drawing.Size(32, 13);
+            this.port.TabIndex = 5;
+            this.port.Text = "Port: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 300);
+            this.Controls.Add(this.port);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.totalOfMessages);
             this.Controls.Add(this.totalOfUsers);
@@ -104,6 +115,7 @@
         private System.Windows.Forms.Label totalOfUsers;
         private System.Windows.Forms.Label totalOfMessages;
         private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Label port;
 
 
 

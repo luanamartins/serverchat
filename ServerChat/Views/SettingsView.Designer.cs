@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.portSettingTextBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,16 +43,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PORT";
             // 
-            // textBox1
+            // portSettingTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 1;
+            this.portSettingTextBox.Location = new System.Drawing.Point(133, 34);
+            this.portSettingTextBox.Name = "portSettingTextBox";
+            this.portSettingTextBox.Size = new System.Drawing.Size(149, 20);
+            this.portSettingTextBox.TabIndex = 1;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(114, 103);
+            this.saveButton.Location = new System.Drawing.Point(114, 76);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(195, 103);
+            this.cancelButton.Location = new System.Drawing.Point(195, 76);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 3;
@@ -74,10 +74,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 172);
+            this.ClientSize = new System.Drawing.Size(400, 125);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.portSettingTextBox);
             this.Controls.Add(this.label1);
             this.Name = "SettingsView";
             this.Text = "Server settings";
@@ -89,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox portSettingTextBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
     }

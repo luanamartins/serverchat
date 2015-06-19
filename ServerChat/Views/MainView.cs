@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using ServerChat.Views;
+using ServerChat.Controllers;
 
 namespace ServerChat
 {
@@ -23,6 +24,24 @@ namespace ServerChat
         public Form1()
         {
             InitializeComponent();
+            this.Activated += new EventHandler(Form1_Activated);
+        }
+
+        void Form1_Activated(object sender, EventArgs e)
+        {
+            updateFields();
+        }
+
+        public void updateFields() 
+        {
+            changeNumberOfUsers();
+            changeNumberOfMessages();
+            updatePortNumber();
+        }
+
+        public void updatePortNumber() 
+        {
+            port.Text = "Port: " + Singleton.getInstance().Port;
         }
 
         public void changeNumberOfUsers() 

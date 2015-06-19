@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using ServerChat.Controllers;
+
 namespace ServerChat.Views
 {
     public partial class SettingsView : Form
@@ -18,7 +20,15 @@ namespace ServerChat.Views
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                Singleton.getInstance().Port = Convert.ToInt32(portSettingTextBox.Text);
+                this.Close();
+            }
+            catch (Exception ex) 
+            {
+                // TODO
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
