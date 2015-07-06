@@ -6,6 +6,8 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 
+using ServerChat.Utils;
+
 namespace ServerChat.Controllers
 {
     class Manager
@@ -13,7 +15,7 @@ namespace ServerChat.Controllers
 
         public static int NumberOfUsers { get; set; }
         public static int NumberOfMessages { get; set; }
-        public List<String> listOfOnlineUsers;
+        public List<String> OnlineUsers;
 
         public void processRequest() 
         {
@@ -46,9 +48,14 @@ namespace ServerChat.Controllers
 
         }
 
-        public void loginRequest(string username, string password) 
+        public void loginRequest(User user) 
         {
-            
+            OnlineUsers.Add(user.Name);
+        }
+
+        public void logoffRequest(User user)
+        {
+            OnlineUsers.Remove(user.Name);
         }
     }
 }

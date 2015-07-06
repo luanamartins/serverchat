@@ -52,6 +52,7 @@
     <Compile Include="Controllers\Singleton.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\User.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
