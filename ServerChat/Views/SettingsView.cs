@@ -20,15 +20,9 @@ namespace ServerChat.Views
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Singleton.getInstance().Port = Convert.ToInt32(portSettingTextBox.Text);
-                this.Close();
-            }
-            catch (Exception ex) 
-            {
-                // TODO
-            }
+            Singleton.getInstance().Port = Convert.ToInt32(portSettingTextBox.Text);
+            this.Close();
+            
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
