@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 
 using ServerChat.Utils;
+using ServerChat.Database;
 
 namespace ServerChat.Controllers
 {
@@ -17,7 +18,7 @@ namespace ServerChat.Controllers
         public static int NumberOfMessages { get; set; }
         public List<String> OnlineUsers;
 
-        public void processRequest() 
+        public void processRequest()
         {
 
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
@@ -50,7 +51,20 @@ namespace ServerChat.Controllers
 
         public void loginRequest(User user) 
         {
-            OnlineUsers.Add(user.Name);
+            // JSON: { "login" : "username", "password" : "password"}
+            // Status:
+               // 1 - Usuário não existe (username não existe / password incorreta)
+               // 2 - Usuário já logado
+               // 3 - Usuário não logado
+            bool isLogged = DatabaseManager.verifyLogin(user);
+            if (isLogged)
+            {
+
+            }
+            else
+            { 
+                OnlineUsers.Add(user.Name);
+            }
         }
 
         public void logoffRequest(User user)
