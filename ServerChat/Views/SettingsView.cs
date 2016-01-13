@@ -22,7 +22,7 @@ namespace ServerChat.Views
         {
             try
             {
-                Singleton.getInstance().Port = Convert.ToInt32(portSettingTextBox.Text);
+                ServerConfiguration.getInstance().Port = Convert.ToInt32(portSettingTextBox.Text);
                 this.Close();
             }
             catch (Exception ex) 

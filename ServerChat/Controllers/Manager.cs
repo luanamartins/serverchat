@@ -13,13 +13,12 @@ namespace ServerChat.Controllers
 
         public static int NumberOfUsers { get; set; }
         public static int NumberOfMessages { get; set; }
-        public List<String> listOfOnlineUsers;
-
+        
         public void processRequest() 
         {
 
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-            int port = Singleton.getInstance().Port;
+            int port = ServerConfiguration.getInstance().Port;
             TcpListener tcpListener = new TcpListener(ipAddress, port);
             
             tcpListener.Start();

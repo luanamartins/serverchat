@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="Controllers\Manager.cs" />
     <Compile Include="Controllers\Request.cs" />
-    <Compile Include="Controllers\Singleton.cs" />
+    <Compile Include="Controllers\ServerConfiguration.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Views\MainView.cs">

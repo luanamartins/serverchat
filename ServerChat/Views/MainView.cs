@@ -42,7 +42,7 @@ namespace ServerChat
 
         public void updatePortNumber() 
         {
-            string value = Singleton.getInstance().Port.ToString();
+            string value = ServerConfiguration.getInstance().Port.ToString();
             port.Text = formatString(Constants.PORT_LABEL, value);
         }
 

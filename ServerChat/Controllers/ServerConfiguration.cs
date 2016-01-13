@@ -5,16 +5,16 @@ using System.Text;
 
 namespace ServerChat.Controllers
 {
-    class Singleton
+    class ServerConfiguration
     {
         public int Port { get; set; }
 
-        public static Singleton singleton;
+        public static ServerConfiguration singleton;
 
-        public static Singleton getInstance() 
+        public static ServerConfiguration getInstance() 
         {
             if (singleton == null) {
-                singleton = new Singleton();
+                singleton = new ServerConfiguration();
             }
             return singleton;
         }

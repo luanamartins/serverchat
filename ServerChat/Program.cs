@@ -38,18 +38,18 @@ namespace ServerChat
             {
                 try
                 {
-                    Singleton.getInstance().Port = 8001;
+                    ServerConfiguration.getInstance().Port = 8001;
                     IPAddress ipAd = IPAddress.Parse("127.0.0.1");
                     // use local m/c IP address, and 
                     // use the same in the client
 
                     // Initializes the Listener 
-                    TcpListener tcpListener = new TcpListener(ipAd, Singleton.getInstance().Port);
+                    TcpListener tcpListener = new TcpListener(ipAd, ServerConfiguration.getInstance().Port);
 
                     /* Start Listeneting at the specified port */
                     tcpListener.Start();
 
-                    Console.WriteLine("The server is running at port " + Singleton.getInstance().Port + "...");
+                    Console.WriteLine("The server is running at port " + ServerConfiguration.getInstance().Port + "...");
                     Console.WriteLine("The local End point is  :" +
                                       tcpListener.LocalEndpoint);
                     Console.WriteLine("Waiting for a connection.....");
